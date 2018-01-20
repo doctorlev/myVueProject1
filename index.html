@@ -1,46 +1,76 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Tri-Qua</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <!-- <link rel="stylesheet" href="my.css"> -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.16/p5.js"></script>
-  </head>
+<title>Tri-Qua</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="my.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.16/p5.js"></script>
 
-    <div class="w3-container w3-green">
-      <!-- <h1>Communicaton/Control between elements</h1> -->
+<body>
+  <div class="w3-container w3-green">
+    <h1>Communicaton/Control between elements</h1>
 
-      <div id="mainVue">
-        <tri @clicked="letsDrawTriangle();"></tri>
-        <!-- <qua @clicked="letsDrawRectangle();"></qua>
-        <cir @clicked="letsDrawCirle();"></cir> -->
-
-      </div>
-      <!-- <p>Click the button to display a figure</p> -->
+    <div id="drawme">
+      <tri @clicked="letsDrawTriangle();"></tri>
+      <qua @clicked="letsDrawRectangle();"></qua>
+      <cir @clicked="letsDrawCirle();"></cir>
     </div>
+    <p>Click the button to display a figure</p>
+  </div>
 
-    <div class="w3-row-padding">
-      <div class="w3-third" id="for-triangle">
-        <div id="elem1">
-          <!-- <h2> {{title}} </h2>
-          <div v-if="seen != true">
-            <p>The <span>{{name}} </span>is hidden</p>
-          </div>
-          <div id="canvas" v-if="seen" >
-            <svg height="110" width="500">
-            <polygon points="100,10 170,100 50,100" style="fill:red;stroke:purple;stroke-width:1" >
-            </svg>
-            <p>To hide the figure - use the button</p>
-            <button @click= "hideElement">Hide Me</button>
-          </div> -->
+  <div class="w3-row-padding">
+    <div class="w3-third" id="for-triangle">
+      <div id="elem1">
+        <h2> {{title}} </h2>
+        <div v-if="seen != true">
+          <p>The <span>{{name}} </span>is hidden</p>
+        </div>
+        <div id="canvas" v-if="seen" >
+          <svg height="110" width="500">
+          <polygon points="100,10 170,100 50,100" style="fill:red;stroke:purple;stroke-width:1" >
+          </svg>
+          <p>To hide the figure - use the button</p>
+          <button @click= "hideElement">Hide Me</button>
         </div>
       </div>
     </div>
 
-    <!-- <script src="https://unpkg.com/vue@2.5.13/dist/vue.js"></script>
+    <div class="w3-third"  id="for-rectangle">
+      <div id="elem2">
+        <h2> {{title}} </h2>
+        <div v-if="seen != true">
+          <p>The <span>{{name}} </span>is hidden</p>
+        </div>
+        <div id="canvas" v-if="seen" >
+          <svg width="400" height="110">
+            <rect width="300" height="100" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)" />
+          </svg>
+          <p>To hide the figure - use the button</p>
+          <button @click= "hideElement">Hide Me</button>
+        </div>
+      </div>
+    </div>
 
-    <script src="/src/main.js"></script> -->
+    <div class="w3-third" id="for-circle">
+      <div id="elem3">
+        <h2> {{title}} </h2>
+        <div v-if="seen != true">
+          <p>The <span>{{name}} </span>is hidden</p>
+        </div>
+        <div id="canvas" v-if="seen" >
+          <svg width="110" height="110">
+             <circle cx="50" cy="50" r="47" stroke="green" stroke-width="4" fill="yellow" />
+          </svg>
+          <p>To hide the figure - use the button</p>
+          <button @click= "hideElement">Hide Me</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
-  </body>
+  <script src="https://unpkg.com/vue@2.5.13/dist/vue.js"></script>
+
+  <script src="main.js"></script>
+
+</body>
 </html>
