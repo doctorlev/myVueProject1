@@ -1,6 +1,7 @@
 # my-project
 
 > A Vue.js project
+ONLY INDEX>HTML AND MAIN>JS
 
 ## Build Setup
 
