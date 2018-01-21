@@ -43,7 +43,13 @@ export default {
       return {
         title: "Element Three (Cir)",
         name: "Circle",
-        seen: false
+        seen: true
+      }
+    },
+    methods: {
+      hideElement() {
+        // alert('works');
+        this.seen = false;
       }
     }
 }

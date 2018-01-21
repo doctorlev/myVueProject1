@@ -1,7 +1,6 @@
 # my-project
 
-> A Vue.js project
-ONLY INDEX>HTML AND MAIN>JS
+> INDEX.HTML AND MAIN.JS *** + separated mainVue and 3 components
 
 ## Build Setup
 

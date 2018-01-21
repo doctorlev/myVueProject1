@@ -3,19 +3,13 @@
     <button @click= "emitClickEvent();">Show figure in Element 1</button>
   </div>
 </template>
-<!-- methods: {
-  emitClickEvent() {
-    // alert('works');
-    this.$emit('clicked');
-  }
-} -->
 
 <script>
 export default {
-  name: 'tri',
+  name: 'Tri',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js Quadro11'
+      msg: 'This is TRI vue component'
     }
   },
   methods: {
@@ -26,6 +20,7 @@ export default {
   }
 }
 </script>
+
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>

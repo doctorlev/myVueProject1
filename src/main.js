@@ -1,40 +1,35 @@
-Vue.component('tri', {
-  template: '<button @click= "emitClickEvent();">Show figure in Element 1</button>',
-  methods: {
-    emitClickEvent() {
-      // alert('works');
-      this.$emit('clicked');
-    }
-  }
-});
+import Vue from 'vue'
+import MainVue from './MainVue'
+import Vue1 from './Vue1'
+import Vue2 from './Vue2'
+import Vue3 from './Vue3'
 
-Vue.component('qua', {
-  template: '<button @click= "emitClickEvent">Show figure in Element 2</button>',
-  methods: {
-    emitClickEvent() {
-      // alert('works');
-      this.$emit('clicked');
-    }
-  }
-});
+Vue.config.productionTip = false
 
-Vue.component('cir', {
-  template: '<button @click= "emitClickEvent">Show figure in Element 3</button>',
-  methods: {
-    emitClickEvent() {
-      // alert('works');
-      this.$emit('clicked');
-    }
-  }
+var mainvue = new Vue({
+// new Vue({
+  el: '#drawme',
+  template: '<MainVue/>',
+  components: {MainVue}
+  // methods: {
+  //   letsDrawTriangle() {
+  //     alert('drawing triangle');
+  //     // vue1.seen = true;
+  //   },
+  //   letsDrawRectangle() {
+  //     // alert('drawing triangle');
+  //     // vue2.seen = true;
+  //   },
+  //   letsDrawCirle() {
+  //     // vue3.seen = true;
+  //   }
+  // }
 });
-
+//
 var vue1 = new Vue({
   el: '#elem1',
-  data: {
-    title: "Element One (Tri)",
-    name: "Triangle",
-    seen: false
-  },
+  template: '<Vue1/>',
+  components: {Vue1},
   methods: {
     hideElement() {
       // alert('works');
@@ -45,11 +40,8 @@ var vue1 = new Vue({
 
 var vue2 = new Vue({
   el: '#elem2',
-  data: {
-    title: "Element Two (Rect)",
-    name: "Rectangle",
-    seen: false
-  },
+  template: '<Vue2/>',
+  components: {Vue2},
   methods: {
     hideElement() {
       this.seen = false;
@@ -59,11 +51,8 @@ var vue2 = new Vue({
 //
 var vue3 = new Vue({
   el: '#elem3',
-  data: {
-    title: "Element Three (Cir)",
-    name: "Circle",
-    seen: false
-  },
+  template: '<Vue3/>',
+  components: {Vue3},
   methods: {
     hideElement() {
       this.seen = false;
@@ -71,22 +60,8 @@ var vue3 = new Vue({
   }
 });
 
-var mainVue = new Vue({
-  el: '#drawme',
-  methods: {
-    letsDrawTriangle() {
-      // alert('drawing triangle');
-      vue1.seen = true;
-    },
-    letsDrawRectangle() {
-      // alert('drawing triangle');
-      vue2.seen = true;
-    },
-    letsDrawCirle() {
-      vue3.seen = true;
-    }
-  }
-});
+
+
 //
 // function setup() {
 //   // createCanvas(640, 360);
@@ -98,3 +73,34 @@ var mainVue = new Vue({
 //     fill(255,255,0);
 //     ellipse(50,50,100,100); //renders centered :')
 // };
+
+// Vue.component('tri', {
+//   template: '<button @click= "emitClickEvent();">Show figure in Element 1</button>',
+//   methods: {
+//     emitClickEvent() {
+//       // alert('works');
+//       this.$emit('clicked');
+//     }
+//   }
+// });
+
+
+// Vue.component('qua', {
+//   template: '<button @click= "emitClickEvent">Show figure in Element 2</button>',
+//   methods: {
+//     emitClickEvent() {
+//       // alert('works');
+//       this.$emit('clicked');
+//     }
+//   }
+// });
+//
+// Vue.component('cir', {
+//   template: '<button @click= "emitClickEvent">Show figure in Element 3</button>',
+//   methods: {
+//     emitClickEvent() {
+//       // alert('works');
+//       this.$emit('clicked');
+//     }
+//   }
+// });

@@ -13,8 +13,9 @@
   <div id="appStyle">
     <h1>This is MainVue Instance</h1>
     <Tri @clicked="letsDrawTriangle();"/>
-    <Rec @clicked="letsDrawRectangle();"></Rec>
-    <Cir @clicked="letsDrawCirle();"></Cir>
+    <Rec @clicked="letsDrawRectangle();"/>
+    <Cir @clicked="letsDrawCirle();"/>
+    <p>Click the button to display a figure</p>
   </div>
 </template>
 
@@ -23,7 +24,7 @@
 import Tri from './components/Tri'
 import Rec from './components/Rec'
 import Cir from './components/Cir'
-// import Elem1 from './Elem1'
+import Vue1 from './Vue1'
 
 export default {
     // name: 'drawme',
@@ -31,6 +32,19 @@ export default {
         Tri,
         Rec,
         Cir
+    },
+    methods: {
+      letsDrawTriangle() {
+        alert('drawing triangle');
+        Vue1.seen = true;
+      },
+      letsDrawRectangle() {
+        alert('drawing rectangle');
+        // vue2.seen = true;
+      },
+      letsDrawCirle() {
+        // vue3.seen = true;
+      }
     }
 }
 

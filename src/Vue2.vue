@@ -43,7 +43,13 @@ export default {
       return {
         title: "Element Two (Rect)",
         name: "Rectangle",
-        seen: false
+        seen: true
+      }
+    },
+    methods: {
+      hideElement() {
+        // alert('works');
+        this.seen = false;
       }
     }
 }

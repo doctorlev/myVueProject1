@@ -31,6 +31,7 @@
 // import Rec from './components/Rec'
 // import Cir from './components/Cir'
 // import Elem1 from './Elem1'
+import MainVue from './MainVue'
 
 export default {
     // name: 'drawme',
@@ -43,7 +44,13 @@ export default {
       return {
         title: "Element One (Tri)",
         name: "Triangle",
-        seen: false
+        seen: true
+      }
+    },
+    methods: {
+      hideElement() {
+        // alert('works');
+        this.seen = false;
       }
     }
 }
