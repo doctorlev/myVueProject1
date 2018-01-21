@@ -27,29 +27,21 @@
 
 <script>
 
-// import Tri from './components/Tri'
-// import Rec from './components/Rec'
-// import Cir from './components/Cir'
-// import Elem1 from './Elem1'
-import MainVue from './MainVue'
+import bus from './bus'
 
 export default {
-    // name: 'drawme',
-    components: {
-        // Tri,
-        // Rec,
-        // Cir
+    created() {
+      bus.$on('drawTriangle', () => this.seen = true)
     },
     data() {
       return {
         title: "Element One (Tri)",
         name: "Triangle",
-        seen: true
+        seen: false
       }
     },
     methods: {
       hideElement() {
-        // alert('works');
         this.seen = false;
       }
     }

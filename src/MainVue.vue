@@ -12,9 +12,11 @@
 <template>
   <div id="appStyle">
     <h1>This is MainVue Instance</h1>
-    <Tri @clicked="letsDrawTriangle();"/>
-    <Rec @clicked="letsDrawRectangle();"/>
-    <Cir @clicked="letsDrawCirle();"/>
+    <div>
+      <Tri @clicked="letsDrawTriangle();"/>
+      <Rec @clicked="letsDrawRectangle();"/>
+      <Cir @clicked="letsDrawCirle();"/>
+    </div>
     <p>Click the button to display a figure</p>
   </div>
 </template>
@@ -24,10 +26,10 @@
 import Tri from './components/Tri'
 import Rec from './components/Rec'
 import Cir from './components/Cir'
-import Vue1 from './Vue1'
+
+import bus from './bus'
 
 export default {
-    // name: 'drawme',
     components: {
         Tri,
         Rec,
@@ -35,15 +37,13 @@ export default {
     },
     methods: {
       letsDrawTriangle() {
-        alert('drawing triangle');
-        Vue1.seen = true;
+        bus.$emit ('drawTriangle')
       },
       letsDrawRectangle() {
-        alert('drawing rectangle');
-        // vue2.seen = true;
+        bus.$emit ('drawRectangle')
       },
       letsDrawCirle() {
-        // vue3.seen = true;
+        bus.$emit ('drawCircle')
       }
     }
 }

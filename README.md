@@ -1,6 +1,7 @@
 # my-project
 
-> INDEX.HTML AND MAIN.JS *** + separated mainVue and 3 components
+> 4 vue instances + 1 Bus (communication via events) instance and 3 components.
+> all - in separated files
 
 ## Build Setup
 
