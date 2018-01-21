@@ -9,7 +9,7 @@ export default {
   name: 'Cir',
   data () {
     return {
-      msg: 'This is TRI vue component'
+      msg: 'This is CIR vue component'
     }
   },
   methods: {

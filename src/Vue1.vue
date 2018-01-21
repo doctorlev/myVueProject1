@@ -47,4 +47,14 @@ export default {
     }
 }
 
+function setup() {
+  // createCanvas(640, 360);
+  let canvas = createCanvas(100, 100);
+  canvas.parent('#canvas');
+};
+function draw() {
+    background(0,0,255);
+    fill(255,255,0);
+    ellipse(50,50,100,100); //renders centered :')
+};
 </script>

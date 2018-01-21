@@ -34,7 +34,7 @@ var vue3 = new Vue({
 // function setup() {
 //   // createCanvas(640, 360);
 //   let canvas = createCanvas(100, 100);
-//   // canvas.parent('#canvas');
+//   canvas.parent('#canvas');
 // };
 // function draw() {
 //     background(0,0,255);
