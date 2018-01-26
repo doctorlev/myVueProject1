@@ -15,7 +15,7 @@
     <div v-if="seen != true">
       <p>The <span>{{name}} </span>is hidden</p>
     </div>
-    <div id="canvas" v-if="seen" >
+    <div id="canvas2" v-if="seen" >
       <svg width="400" height="110">
         <rect width="300" height="100" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)" />
       </svg>

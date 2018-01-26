@@ -15,11 +15,12 @@
     <div v-if="seen != true">
       <p>The <span>{{name}} </span>is hidden</p>
     </div>
-    <div id="canvas" v-if="seen" >
-      <svg height="110" width="500">
+    <div id="canvas1" v-if="seen" >
+      <div id="p5canvas"></div>
+      <!-- <svg height="110" width="500">
         <polygon points="100,10 170,100 50,100" style="fill:red;stroke:purple;stroke-width:1"/>
-      </svg>
-      <p>To hide the figure - use the button</p>
+      </svg> -->
+      <p>To hide the figure - use the button code999</p>
       <button @click= "hideElement">Hide Me</button>
     </div>
   </div>
@@ -37,7 +38,7 @@ export default {
       return {
         title: "Element One (Tri)",
         name: "Triangle",
-        seen: false
+        seen: true
       }
     },
     methods: {
@@ -46,15 +47,4 @@ export default {
       }
     }
 }
-
-function setup() {
-  // createCanvas(640, 360);
-  let canvas = createCanvas(100, 100);
-  canvas.parent('#canvas');
-};
-function draw() {
-    background(0,0,255);
-    fill(255,255,0);
-    ellipse(50,50,100,100); //renders centered :')
-};
 </script>
